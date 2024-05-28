@@ -128,7 +128,7 @@ const CreateListing = () => {
       });
 
       /* Send a POST request to server */
-      const response = await fetch("/properties/create", {
+      const response = await fetch("https://rentify-backend-three.vercel.app/properties/create", {
         method: "POST",
         body: listingForm,
       });
