@@ -17,7 +17,7 @@ const TripList = () => {
   const getTripList = async () => {
     try {
       const response = await fetch(
-        `/users/${userId}/trips`,
+        `https://rentify-backend-three.vercel.app/users/${userId}/trips`,
         {
           method: "GET",
         }
