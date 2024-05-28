@@ -9,14 +9,14 @@ const listingRoutes = require("./routes/listing.js")
 const bookingRoutes = require("./routes/booking.js")
 const userRoutes = require("./routes/user.js")
 
+app.use(express.json());
+app.use(express.static("public"));
 app.use(cors(
    {
      origin: "https://rentify-eta-pink.vercel.app/",
      credentials: true,
    }
 ));
-app.use(express.json());
-app.use(express.static("public"));
 
 /* ROUTES */
 app.use("/auth", authRoutes)
