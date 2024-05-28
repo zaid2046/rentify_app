@@ -14,7 +14,6 @@ app.use(cors(
      origin: "https://rentify-eta-pink.vercel.app/",
      methods: ["POST", "GET", "PATCH", "PUT", "DELETE"],
      credentials: true,
-     optionSuccessStatus:200,
    }
 ));
 app.use(express.json());
