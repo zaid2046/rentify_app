@@ -130,7 +130,7 @@ const ListingDetails = () => {
             )}`}
           />
           <h3>
-            Hosted by {listing.creator.firstName} {listing.creator.lastName}
+            Hosted by {listing.creator.firstName} {listing.creator.lastName} Email: {listing.creator.email} Phone number: {listing.creator.phone_no}
           </h3>
         </div>
         <hr />

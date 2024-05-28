@@ -7,6 +7,7 @@ const RegisterPage = () => {
     firstName: "",
     lastName: "",
     email: "",
+    phone_no: "",
     password: "",
     confirmPassword: "",
     profileImage: null,
@@ -75,6 +76,13 @@ const RegisterPage = () => {
             name="email"
             type="email"
             value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            placeholder="phone number"
+            name="phone_no"
+            value={formData.phone_no}
             onChange={handleChange}
             required
           />
