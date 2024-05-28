@@ -11,9 +11,10 @@ const userRoutes = require("./routes/user.js")
 
 app.use(cors(
    {
-     origin: ["https://rentify-eta-pink.vercel.app/"],
+     origin: ["*"],
      methods: ["POST", "GET", "PATCH"],
-     credentials: true
+     credentials: true,
+     optionSuccessStatus:200,
    }
 ));
 app.use(express.json());
