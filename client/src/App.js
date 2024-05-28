@@ -17,17 +17,17 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="https://rentify-backend-three.vercel.app/" element={<HomePage />} />
-          <Route path="https://rentify-backend-three.vercel.app/register" element={<RegisterPage />} />
-          <Route path="https://rentify-backend-three.vercel.app/login" element={<LoginPage />} />
-          <Route path="https://rentify-backend-three.vercel.app/create-listing" element={<CreateListing />} />
-          <Route path="https://rentify-backend-three.vercel.app/properties/:listingId" element={<ListingDetails />} />
-          <Route path="https://rentify-backend-three.vercel.app/properties/category/:category" element={<CategoryPage />} />
-          <Route path="https://rentify-backend-three.vercel.app/properties/search/:search" element={<SearchPage />} />
-          <Route path="https://rentify-backend-three.vercel.app/:userId/trips" element={<TripList />} />
-          <Route path="https://rentify-backend-three.vercel.app/:userId/wishList" element={<WishList />} />
-          <Route path="https://rentify-backend-three.vercel.app/:userId/properties" element={<PropertyList />} />
-          <Route path="https://rentify-backend-three.vercel.app/:userId/reservations" element={<ReservationList />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/create-listing" element={<CreateListing />} />
+          <Route path="/properties/:listingId" element={<ListingDetails />} />
+          <Route path="/properties/category/:category" element={<CategoryPage />} />
+          <Route path="/properties/search/:search" element={<SearchPage />} />
+          <Route path="/:userId/trips" element={<TripList />} />
+          <Route path="/:userId/wishList" element={<WishList />} />
+          <Route path="/:userId/properties" element={<PropertyList />} />
+          <Route path="/:userId/reservations" element={<ReservationList />} />
         </Routes>
       </BrowserRouter>
     </div>
