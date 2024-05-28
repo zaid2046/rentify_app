@@ -12,7 +12,7 @@ const userRoutes = require("./routes/user.js")
 app.use(cors(
    {
      origin: "*",
-     methods: ["POST", "GET", "PATCH"],
+     methods: ["POST", "GET", "PATCH", "PUT", "DELETE"],
      credentials: true,
      optionSuccessStatus:200,
    }
