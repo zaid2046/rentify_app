@@ -16,7 +16,7 @@ const LoginPage = () => {
     e.preventDefault()
 
     try {
-      const response = await fetch ("https://rentify-backend-three.vercel.app/auth/login", {
+      const response = await fetch ("/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

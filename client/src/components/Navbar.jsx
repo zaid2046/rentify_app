@@ -60,7 +60,7 @@ const Navbar = () => {
             <Person sx={{ color: variables.darkgrey }} />
           ) : (
             <img
-              src={`https://rentify-backend-three.vercel.app/${user.profileImagePath.replace(
+              src={`/${user.profileImagePath.replace(
                 "public",
                 ""
               )}`}

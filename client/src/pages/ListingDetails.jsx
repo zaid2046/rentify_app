@@ -20,7 +20,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const response = await fetch(
-        `https://rentify-backend-three.vercel.app/properties/${listingId}`,
+        `/properties/${listingId}`,
         {
           method: "GET",
         }
@@ -75,7 +75,7 @@ const ListingDetails = () => {
         totalPrice: listing.price * dayCount,
       }
 
-      const response = await fetch("https://rentify-backend-three.vercel.app/bookings/create", {
+      const response = await fetch("/bookings/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -106,7 +106,7 @@ const ListingDetails = () => {
         <div className="photos">
           {listing.listingPhotoPaths?.map((item) => (
             <img
-              src={`https://rentify-backend-three.vercel.app/${item.replace("public", "")}`}
+              src={`/${item.replace("public", "")}`}
               alt="listing photo"
             />
           ))}
@@ -124,7 +124,7 @@ const ListingDetails = () => {
 
         <div className="profile">
           <img
-            src={`https://rentify-backend-three.vercel.app/${listing.creator.profileImagePath.replace(
+            src={`/${listing.creator.profileImagePath.replace(
               "public",
               ""
             )}`}

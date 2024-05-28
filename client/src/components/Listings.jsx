@@ -18,8 +18,8 @@ const Listings = () => {
     try {
       const response = await fetch(
         selectedCategory !== "All"
-          ? `https://rentify-backend-three.vercel.app/properties?category=${selectedCategory}`
-          : "https://rentify-backend-three.vercel.app/properties",
+          ? `/properties?category=${selectedCategory}`
+          : "/properties",
         {
           method: "GET",
         }

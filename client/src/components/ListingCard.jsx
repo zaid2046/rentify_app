@@ -50,7 +50,7 @@ const ListingCard = ({
   const patchWishList = async () => {
     if (user?._id !== creator._id) {
     const response = await fetch(
-      `https://rentify-backend-three.vercel.app/users/${user?._id}/${listingId}`,
+      `/users/${user?._id}/${listingId}`,
       {
         method: "PATCH",
         header: {
@@ -78,7 +78,7 @@ const ListingCard = ({
           {listingPhotoPaths?.map((photo, index) => (
             <div key={index} className="slide">
               <img
-                src={`https://rentify-backend-three.vercel.app/${photo?.replace("public", "")}`}
+                src={`/${photo?.replace("public", "")}`}
                 alt={`photo ${index + 1}`}
               />
               <div

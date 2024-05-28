@@ -18,7 +18,7 @@ const CategoryPage = () => {
   const getFeedListings = async () => {
     try {
       const response = await fetch(
-          `https://rentify-backend-three.vercel.app/properties?category=${category}`,
+          `/properties?category=${category}`,
         {
           method: "GET",
         }
