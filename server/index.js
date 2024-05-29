@@ -10,7 +10,6 @@ const bookingRoutes = require("./routes/booking.js")
 const userRoutes = require("./routes/user.js")
 
 app.use(express.json());
-app.use(express.static("public"));
 app.use(cors(
    {
      origin: "*",
@@ -18,6 +17,7 @@ app.use(cors(
      credentials: true,
    }
 ));
+app.use(express.static("public"));
 
 /* ROUTES */
 app.use("/auth", authRoutes)
@@ -37,3 +37,7 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
   })
   .catch((err) => console.log(`${err} did not connect`));
+
+app.get("/", (req, res) => {
+   res.json("Hello");
+})
