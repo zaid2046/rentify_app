@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(cors(
    {
-     origin: "https://rentify-eta-pink.vercel.app/",
+     origin: "*",
      credentials: true,
    }
 ));
